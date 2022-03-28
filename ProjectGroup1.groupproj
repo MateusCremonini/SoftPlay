@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0CA0F834-D5E0-4FBF-AABF-83764433EF87}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="prjMVP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\prjMVPTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="prjMVP">
+        <MSBuild Projects="prjMVP.dproj"/>
+    </Target>
+    <Target Name="prjMVP:Clean">
+        <MSBuild Projects="prjMVP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="prjMVP:Make">
+        <MSBuild Projects="prjMVP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="prjMVPTests">
+        <MSBuild Projects="Test\prjMVPTests.dproj"/>
+    </Target>
+    <Target Name="prjMVPTests:Clean">
+        <MSBuild Projects="Test\prjMVPTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="prjMVPTests:Make">
+        <MSBuild Projects="Test\prjMVPTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="prjMVP;prjMVPTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="prjMVP:Clean;prjMVPTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="prjMVP:Make;prjMVPTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
