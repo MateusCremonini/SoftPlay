@@ -9,7 +9,7 @@ inherited CadVenda: TCadVenda
     Width = 777
     Height = 570
     object DBLookupComboBox1: TDBLookupComboBox [0]
-      Left = 403
+      Left = 467
       Top = 28
       Width = 290
       Height = 21
@@ -18,7 +18,7 @@ inherited CadVenda: TCadVenda
       TabOrder = 1
     end
     object cxGrid1: TcxGrid [1]
-      Left = 343
+      Left = 407
       Top = 100
       Width = 400
       Height = 200
@@ -60,7 +60,6 @@ inherited CadVenda: TCadVenda
       end
     end
     inherited cxGrid3: TcxGrid
-      Left = -42
       Width = 343
       Height = 416
       inherited cxGrid3DBTableView1: TcxGridDBTableView
@@ -127,16 +126,15 @@ inherited CadVenda: TCadVenda
       end
     end
     object memCupom: TMemo [3]
-      Left = 333
+      Left = 397
       Top = 377
       Width = 410
       Height = 85
-      Align = alClient
       BorderStyle = bsNone
       TabOrder = 5
     end
     object cxDBDateEdit1: TcxDBDateEdit [4]
-      Left = 403
+      Left = 467
       Top = 55
       DataBinding.DataField = 'DataEntrega'
       DataBinding.DataSource = dsDados
@@ -150,7 +148,7 @@ inherited CadVenda: TCadVenda
       Width = 210
     end
     object DBEdit1: TDBEdit [5]
-      Left = 620
+      Left = 684
       Top = 308
       Width = 121
       Height = 17
@@ -167,36 +165,36 @@ inherited CadVenda: TCadVenda
     inherited dxLayoutGroup4: TdxLayoutGroup
       Index = 0
     end
-    object dxLayoutGroup3: TdxLayoutGroup [8]
+    inherited dxLayoutItem6: TdxLayoutItem
+      Index = 0
+    end
+    object dxLayoutGroup3: TdxLayoutGroup
       Parent = dxLayoutAutoCreatedGroup1
       AlignHorz = ahLeft
       AlignVert = avTop
       ButtonOptions.Buttons = <>
       Index = 0
     end
-    object dxLayoutItem1: TdxLayoutItem [9]
+    object dxLayoutItem1: TdxLayoutItem
       Parent = dxLayoutGroup3
       CaptionOptions.Text = 'Nome Cliente:'
       Control = DBLookupComboBox1
       ControlOptions.ShowBorder = False
       Index = 0
     end
-    object dxLayoutGroup1: TdxLayoutGroup [10]
+    object dxLayoutGroup1: TdxLayoutGroup
       Parent = dxLayoutGroup3
       AlignHorz = ahClient
       CaptionOptions.Text = 'Produtos:'
       ButtonOptions.Buttons = <>
       Index = 2
     end
-    object dxLayoutItem2: TdxLayoutItem [11]
+    object dxLayoutItem2: TdxLayoutItem
       Parent = dxLayoutGroup1
       CaptionOptions.Text = 'cxGrid1'
       CaptionOptions.Visible = False
       Control = cxGrid1
       ControlOptions.ShowBorder = False
-      Index = 0
-    end
-    inherited dxLayoutItem6: TdxLayoutItem
       Index = 0
     end
     object dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup
@@ -233,7 +231,7 @@ inherited CadVenda: TCadVenda
     object dxLayoutItem5: TdxLayoutItem
       Parent = dxLayoutGroup1
       AlignHorz = ahRight
-      CaptionOptions.Text = 'DBEdit1'
+      CaptionOptions.Text = 'Total'
       Control = DBEdit1
       Index = 1
     end
